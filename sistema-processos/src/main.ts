@@ -4,7 +4,6 @@ import { AppComponent } from './app/app.component';
 import { EditorComponent } from './app/editor/editor.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
   { path: 'editar/:id', component: EditorComponent }
 ];
 
