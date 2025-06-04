@@ -1,0 +1,29 @@
+<h2>Editando Processo {{ processoId }}</h2>
+
+<!-- VISUALIZAÇÃO -->
+<div *ngIf="modoVisualizacao" class="visualizador">
+  <div class="editor-a4 visualizacao-html" [innerHTML]="conteudo"></div>
+  <button (click)="editarNovamente()">Editar novamente</button>
+</div>
+
+<!-- EDIÇÃO -->
+<div *ngIf="!modoVisualizacao" class="editor-wrapper">
+  <editor
+  [(ngModel)]="conteudo"
+  [init]="{
+    plugins: 'lists link image table code help wordcount',
+    toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright | bullist numlist outdent indent | table image link | code help',
+    menubar: false,
+    branding: false,
+    height: 1150,
+    content_style: '.editor-a4 { max-width: 794px; margin: 0 auto; padding: 40px; background: white; min-height: 1123px; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-family: Times New Roman, serif; }',
+    body_class: 'editor-a4',
+    forced_root_block: 'p',
+    force_p_newlines: true
+  }"
+></editor>
+
+
+  <button (click)="salvar()">Salvar</button>
+  <button (click)="limpar()">Limpar</button>
+</div>
