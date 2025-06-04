@@ -1,9 +1,21 @@
 <h2>Lista de Processos</h2>
-<ul>
-  <li *ngFor="let p of processos">
-    <strong>{{ p.titulo }}</strong>
-    <a [routerLink]="['/editar', p.id]">Editar</a>
-  </li>
-</ul>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Título</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of processos">
+      <td>{{ p.id }}</td>
+      <td>{{ p.titulo }}</td>
+      <td>
+        <a [routerLink]="['/editar', p.id]" class="btn btn-primary btn-sm">Editar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <router-outlet></router-outlet>

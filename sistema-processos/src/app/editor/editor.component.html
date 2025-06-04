@@ -3,7 +3,7 @@
 <!-- VISUALIZAÇÃO -->
 <div *ngIf="modoVisualizacao" class="visualizador">
   <div class="editor-a4 visualizacao-html" [innerHTML]="conteudo"></div>
-  <button (click)="editarNovamente()">Editar novamente</button>
+  <button class="btn btn-secondary" (click)="editarNovamente()">Editar novamente</button>
 </div>
 
 <!-- EDIÇÃO -->
@@ -24,6 +24,6 @@
 ></editor>
 
 
-  <button (click)="salvar()">Salvar</button>
-  <button (click)="limpar()">Limpar</button>
+  <button class="btn btn-success me-2" (click)="salvar()">Salvar</button>
+  <button class="btn btn-secondary" (click)="limpar()">Limpar</button>
 </div>
