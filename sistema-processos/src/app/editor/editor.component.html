@@ -4,6 +4,9 @@
 <div *ngIf="modoVisualizacao" class="visualizador">
   <div class="editor-a4 visualizacao-html" [innerHTML]="conteudo"></div>
   <button class="btn btn-secondary" (click)="editarNovamente()">Editar novamente</button>
+  <button class="btn btn-outline-primary ms-2" (click)="imprimir()" title="Imprimir">
+    <i class="bi bi-printer"></i>
+  </button>
 </div>
 
 <!-- EDIÇÃO -->

@@ -66,4 +66,8 @@ export class EditorComponent {
   editarNovamente(): void {
     this.modoVisualizacao = false;
   }
+
+  imprimir(): void {
+    window.print();
+  }
 }
